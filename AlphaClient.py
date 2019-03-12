@@ -2,7 +2,7 @@
 
 import time, sys, socket
 
-curr = 0
+current = 0
 count = 0
 name = socket.gethostname()
 #HOST = '192.168.100.84'
@@ -17,18 +17,18 @@ client.connect((HOST, PORT))
 while True:
     try:
         #client.connect((target_host, target_port))
-        with open('/var/log/auth.log') as f:
+        with open('/var/log/auth.log') as logFile:
             #fContent = f.readlines()
-            f.seek(0,2)
-            if f.tell() < curr:
-                f.seek(0,0)
+            logFile.seek(0,2)
+            if logFile.tell() < current:
+                logFile.seek(0,0)
             else:
-                f.seek(curr,0)
-            for line in f:
+                logFile.seek(current,0)
+            for line in logFile:
                 if ('Failed' in line) or ('Invalid' in line) or ('Accepted' in line):
                     #print(line)
                     count += 1
-            curr = f.tell()
+            current = logFile.tell()
     
             client.send(('[*] ' + name + ' had '+ str(count) + ' attempts ').encode())
             
