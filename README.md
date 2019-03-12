@@ -1,5 +1,5 @@
 # SSH-Login Attempts
-report ssh log-in attempts status on the AlphaClient machine to the AlphaServer machine
+report AlphaClient's ssh log-in attempts to the AlphaServer machine
 
 ## Server
 ```bash
