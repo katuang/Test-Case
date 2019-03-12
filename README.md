@@ -9,5 +9,5 @@ usage : python AlphaServer.py
 ## Client
 ```bash
 cd /tmp/Test-Case
-usage : python AlphaClient.py "IP Address Server"
+usage : python AlphaClient.py "IP Address AlphaServer machine"
 ```
