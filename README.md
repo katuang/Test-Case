@@ -3,9 +3,11 @@ report ssh log-in attempts status on the AlphaClient machine to the AlphaServer 
 
 ## Server
 ```bash
+cd /tmp/Test-Case
 usage : python AlphaServer.py
 ```
 ## Client
 ```bash
+cd /tmp/Test-Case
 usage : python AlphaClient.py "IP Address Server"
 ```
