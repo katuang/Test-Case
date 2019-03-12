@@ -1,9 +1,0 @@
----
-- hosts: 192.168.100.85
-  tasks:
-    - name: clone repository from git
-      git:
-        repo: https://github.com/katuang/Test-Case.git
-        dest: /tmp/Test-Case
-        update: yes
-        version: master
